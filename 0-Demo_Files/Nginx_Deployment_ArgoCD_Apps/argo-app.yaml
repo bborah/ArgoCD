@@ -9,7 +9,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: 0-Demo_Files/Nginx_Deployment
-    repoURL: 'https://github.com/bborah/ArgoCD-Complete-Master-Course.git'
+    repoURL: 'https://github.com/bborah/ArgoCD.git'
     targetRevision: HEAD
   project: default
   syncPolicy:

@@ -44,6 +44,6 @@ metadata:
   namespace: argocdappdemo-ignorediff
 data:
   key1: "value100"
-  key2: "value2"
+  key2: "value200"
 
 

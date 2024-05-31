@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    operator.tekton.dev/last-applied-hash: 43c196abd35dabb0d546b7490f0ad641beebc845d5d03020f49ee4d15293a63b
+  creationTimestamp: "2024-05-31T05:58:19Z"
+  labels:
+    app: tekton-dashboard
+    app.kubernetes.io/component: dashboard
+    app.kubernetes.io/instance: default
+    app.kubernetes.io/name: dashboard
+    app.kubernetes.io/part-of: tekton-dashboard
+    app.kubernetes.io/version: v0.43.1
+    dashboard.tekton.dev/release: v0.43.1
+    operator.tekton.dev/operand-name: tektoncd-dashboard
+    version: v0.43.1
+  name: tekton-dashboard
+  namespace: tekton-pipelines
+  ownerReferences:
+  - apiVersion: operator.tekton.dev/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: TektonInstallerSet
+    name: dashboard-main-deployment-lvbhs
+    uid: 9b9baa63-acdc-40b9-9d1d-43f6e2832c01
+  resourceVersion: "836924"
+  uid: 7ff374fe-c38d-42e5-8253-69c45006cce4
+spec:
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    port: 9097
+    protocol: TCP
+    targetPort: 9097
+  selector:
+    app.kubernetes.io/component: dashboard
+    app.kubernetes.io/instance: default
+    app.kubernetes.io/name: dashboard
+    app.kubernetes.io/part-of: tekton-dashboard
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
